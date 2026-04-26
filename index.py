@@ -736,4 +736,7 @@ def admin_panel():
 
 @app.get("/")
 def root():
+
     return {"app": "Betting Platform API", "version": "1.0.0", "docs": "/docs", "admin": "/admin"}
+    from mangum import Mangum
+handler = Mangum(app)
